@@ -71,7 +71,7 @@ proxy-groups:
     - {name: 轮询3, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ cf13, cf14, cf15, cf16, cf17, cf18, cf19, cf20, cf21, cf22, helan, helan2, helan3]}
     - {name: 轮询2, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 新加坡01‖解锁‖1x‖, 国内1, 国内2, 国内3, cf1, cf2, cf3, cf4, cf5, cf6]}
     - {name: 散列, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: consistent-hashing, proxies: [ 国内1, 国内2, 国内3, 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 新加坡01‖解锁‖1x‖, cf1, cf2, cf3, cf4, cf5, cf6, cf7, cf8, cf9, cf10, cf11, cf12, cf13, cf14, cf15, cf16, cf17, cf18, cf19, cf20, cf21, cf22, helan, helan2, helan3]}
-    - { name: 代理, type: select, filter: '香港', proxies: [ 轮询2, 散列, 轮询, 日本01‖CN2‖2x‖, 沪日专线‖IPLC‖8x‖, 日本02‖高速‖1.5x‖, 日本3‖备用‖1x‖, 加拿大01‖高速‖1x‖, 加拿大02‖高速‖1x‖, 新加坡01‖解锁‖1x‖, 新加坡02‖解锁‖1.5x‖, 新加坡03‖解锁‖1.5x‖, 英国01‖Chatgpt‖1x‖, 英国02‖Chatgpt‖1x‖, 英国03‖Chatgpt‖1x‖, 深港专线‖IPLC‖8x‖, 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 香港3‖备用‖1.2x‖, 美国01‖解锁‖1x‖, 美国02‖解锁‖1x‖, 美国03‖解锁‖1x‖, 土耳其01‖解锁‖1x‖, 美国加州01‖Netflix‖1.5x‖, 美国加州02‖Netflix‖1.5x‖, 美国加州03‖Netflix‖1.5x‖] }
+    - { name: 代理, type: select, filter: '香港', proxies: [ 轮询,轮询2, 散列, 轮询3, 新加坡01‖解锁‖1x‖, 新加坡02‖解锁‖1.5x‖, 新加坡03‖解锁‖1.5x‖, 英国01‖Chatgpt‖1x‖, 英国02‖Chatgpt‖1x‖, 英国03‖Chatgpt‖1x‖, 深港专线‖IPLC‖8x‖, 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 香港3‖备用‖1.2x‖, 美国01‖解锁‖1x‖, 美国02‖解锁‖1x‖, 美国03‖解锁‖1x‖, 土耳其01‖解锁‖1x‖, 美国加州01‖Netflix‖1.5x‖, 美国加州02‖Netflix‖1.5x‖, 美国加州03‖Netflix‖1.5x‖, cf7, cf8, cf9, cf10, cf11, cf12, cf13, cf14, cf15, cf16, cf17, cf18, cf19, cf20, cf21, cf22, helan, helan2, helan3] }
 rules:
     - 'DOMAIN-SUFFIX,youtu.be,代理'
     - 'DOMAIN-KEYWORD,google,代理'
