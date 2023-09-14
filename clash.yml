@@ -78,7 +78,6 @@ rules:
     - 'DOMAIN-KEYWORD,video,代理'
     - 'DOMAIN-KEYWORD,youtube,notcf'
     - 'DOMAIN-KEYWORD,gmail,代理'
-    - 'DOMAIN-KEYWORD,youtube,代理'
     - 'DOMAIN,sub.coco2.ink,DIRECT'
     - 'DOMAIN-SUFFIX,services.googleapis.cn,代理'
     - 'DOMAIN-SUFFIX,xn--ngstr-lra8j.com,代理'
