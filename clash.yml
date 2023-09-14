@@ -76,7 +76,7 @@ proxy-groups:
 rules:
     - 'DOMAIN-SUFFIX,youtu.be,代理'
     - 'DOMAIN-KEYWORD,video,代理'
-    - 'DOMAIN-KEYWORD,google,notcf'
+    - 'DOMAIN-KEYWORD,youtube,notcf'
     - 'DOMAIN-KEYWORD,gmail,代理'
     - 'DOMAIN-KEYWORD,youtube,代理'
     - 'DOMAIN,sub.coco2.ink,DIRECT'
