@@ -75,6 +75,7 @@ proxy-groups:
     - { name: notcf, type: select, proxies: [ 美国加州01‖Netflix‖1.5x‖, 美国加州02‖Netflix‖1.5x‖, 美国加州01‖Netflix‖1.5x‖]}
 rules:
     - 'DOMAIN-SUFFIX,youtu.be,代理'
+    - 'DOMAIN-KEYWORD,video,代理'
     - 'DOMAIN-KEYWORD,google,notcf'
     - 'DOMAIN-KEYWORD,gmail,代理'
     - 'DOMAIN-KEYWORD,youtube,代理'
