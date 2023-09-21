@@ -68,7 +68,7 @@ proxies:
     - { name: cf0919, type: vless, server: speedip.eu.org, port: 2052, uuid: a85f2abf-5798-4706-b97b-0858025a3594, network: ws, tls: false, udp: false, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: 0919.wildjane63.workers.dev } } }
     - { name: cf22, type: vless, server: 104.26.11.60, port: 2052, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
 proxy-groups:
-    - { name: 代理, type: select, proxies: [ 轮询, 轮询2, 散列, 轮询3, cf7, cf8, cf9, cf10, cf11, cf12, cf13, cf14, cf15, cf16, cf17, cf18, cf19, cf20, cf21, cf22, helan, helan2, helan3 ] }
+    - { name: 代理, type: select, proxies: [ 轮询, 轮询2, 散列, 轮询3, cf7, cf8, cf0919, cf9, cf10, cf11, cf12, cf13, cf14, cf15, cf16, cf17, cf18, cf19, cf20, cf21, cf22, helan, helan2, helan3 ] }
     - { name: 轮询, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ cf7, cf8, cf9, cf10, cf11, cf12 ] }
     - { name: 轮询2, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ 国内1, 国内2, 国内3, cf1, cf2, cf3, cf4, cf5, cf6 ] }
     - { name: 轮询3, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ cf13, cf14, cf15, cf16, cf17, cf18, cf19, cf20, cf21, cf22, helan, helan2, helan3 ] }
