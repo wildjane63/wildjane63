@@ -70,7 +70,7 @@ proxies:
 proxy-groups:
     - { name: 代理, type: select, proxies: [ 美国ipv6, 美国v6, 新加坡v6, 日本, 韩国, piaosir, b100, xn, edgetunnel, all.xn, anycast, jp01, de, 5.60, 轮询, 轮询2, 散列, 轮询3, 新加坡01‖解锁‖1x‖, 新加坡02‖解锁‖1.5x‖, 新加坡03‖解锁‖1.5x‖, 英国01‖Chatgpt‖1x‖, 英国02‖Chatgpt‖1x‖, 英国03‖Chatgpt‖1x‖, 深港专线‖IPLC‖8x‖, 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 香港3‖备用‖1.2x‖, 美国01‖解锁‖1x‖, 美国02‖解锁‖1x‖, 美国03‖解锁‖1x‖, 土耳其01‖解锁‖1x‖, 美国加州01‖Netflix‖1.5x‖, 美国加州02‖Netflix‖1.5x‖, 美国加州03‖Netflix‖1.5x‖] }
     - {name: 轮询, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ piaosir, b100, xn, edgetunnel, all.xn, anycast, jp01, de, 5.60]}
-    - {name: 轮询3, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ cf22]}
+    - {name: 轮询3, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ 韩国]}
     - {name: 轮询2, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 新加坡01‖解锁‖1x‖]}
     - {name: 散列, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: consistent-hashing, proxies: [ 香港1‖CN2‖2x‖, 香港2‖高速‖1.5x‖, 新加坡01‖解锁‖1x‖]}
     - { name: notcf, type: select, proxies: [ 美国加州01‖Netflix‖1.5x‖, 美国加州02‖Netflix‖1.5x‖, 美国加州01‖Netflix‖1.5x‖]}
