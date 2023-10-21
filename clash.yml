@@ -255,7 +255,7 @@ rules:
     - 'DOMAIN-KEYWORD,adsmogo,REJECT'
     - 'DOMAIN-KEYWORD,adsrvmedia,REJECT'
     - 'DOMAIN-KEYWORD,adwords,REJECT'
-    - 'DOMAIN-KEYWORD,adservice,REJECT'
+    - 'DOMAIN-KEYWORD,adservice,代理'
     - 'DOMAIN-SUFFIX,appsflyer.com,REJECT'
     - 'DOMAIN-KEYWORD,domob,REJECT'
     - 'DOMAIN-SUFFIX,doubleclick.net,代理'
