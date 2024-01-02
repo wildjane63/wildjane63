@@ -20,10 +20,10 @@ proxies:
     - { name: 新加坡v6, type: vless, server: 2606:4700:8d73:5e39:ad32:f985:c15c:3bbf, port: 2052, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
     - { name: 美国ipv6, type: vless, server: 2606:4700:311c:570c:2079:38ed:d254:1c62, port: 2052, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
     - { name: 美国v6, type: vless, server: 2606:4700:311d:e0f2:5630:cdfb:fbd5:5da7, port: 2052, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
-    - { name: 日本, type: vless, server: 47.245.59.188, port: 2052, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
+    - { name: 日本, type: vless, server: 47.245.38.149, port: 80, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
     - { name: 韩国, type: vless, server: 146.56.132.188, port: 2052, uuid: 8a3263bc-cbba-47a1-9ca0-6b7667f03f8e, network: ws, tls: false, udp: false, sni: fandai.wildjane63.workers.dev, client-fingerprint: chrome, ws-opts: { path: "/?ed=2048", headers: { host: fandai.wildjane63.workers.dev } } }
 proxy-groups:
-    - { name: 代理, type: select, proxies: [ 美国ipv6, 美国v6, 新加坡v6, 日本, 韩国, anycast, 560, 轮询, 轮询2, 散列, 轮询3 ] }
+    - { name: 代理, type: select, proxies: [ 560, 美国ipv6, 美国v6, 新加坡v6, 日本, 韩国, anycast, 轮询, 轮询2, 散列, 轮询3 ] }
     - {name: 轮询, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [anycast, 560 ]}
     - {name: 轮询3, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ 韩国 ]}
     - {name: 轮询2, type: load-balance, url: http://www.google.com/generate_204, interval: 300, strategy: round-robin, proxies: [ 新加坡v6 ]}
